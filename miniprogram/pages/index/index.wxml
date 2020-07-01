@@ -1,0 +1,34 @@
+<view>
+  今天是{{todayObj.year}}年{{todayObj.month}}月{{todayObj.date}}日，{{todayObj.week}}
+</view>
+<view>今天限行的号码是：</view>
+<view>
+  <view hidden="{{!imgHidden}}">
+    <image src="/images/{{imgOne}}.png"></image>
+    <image src="/images/{{imgTwo}}.png"></image>
+  </view>
+  <view hidden="{{imgHidden}}">
+    <image src="/images/none.png"></image>
+  </view>
+
+</view>
+
+<view>
+  <picker mode="date" value="{{pickerDate}}" start="2019-09-01" end="2022-09-01" bindchange="bindDateChange">点击选择日期</picker>
+
+  <view hidden="{{!ifCheck}}">
+    <view>选定的{{checkObj.year}}年{{checkObj.month}}月{{checkObj.date}}日({{checkObj.week}})的限行号码为
+    </view>
+
+    <view>
+      <view hidden="{{!imgHidden02}}">
+        <image src="/images/{{imgOne_s}}.png"></image>
+        <image src="/images/{{imgTwo_s}}.png"></image>
+      </view>
+      <view hidden="{{imgHidden02}}">
+        <image src="/images/none.png"></image>
+      </view>
+    
+    </view>
+  </view>
+</view>
