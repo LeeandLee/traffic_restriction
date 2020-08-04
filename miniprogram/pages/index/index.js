@@ -10,6 +10,7 @@ Page({
     // 今日限行的两张照片地址
     imgOne: null,
     imgTwo: null,
+    // 下方选择的限行照片
     imgOne_s: null,
     imgTwo_s: null,
     // 用于显示周末不限行的照片
@@ -59,11 +60,10 @@ Page({
       name: "restriction",
       data: {
         checkdate
-      },
-
+      }
     }).then(res => {
-      // 返回的当天限行的真实星期编号
-      var that = this
+      console.log(res)
+
       if (res.result.length != 0) {
         // 除了周末之外的时间
         this.setData({
@@ -76,8 +76,8 @@ Page({
         this.setData({
           imgHidden: false
         })
-
       }
+
     })
 
   },
@@ -105,8 +105,6 @@ Page({
       checkObj: checkObj
     })
 
-
-
     wx.cloud.callFunction({
       name: "restriction",
       data: {
@@ -128,7 +126,6 @@ Page({
         this.setData({
           imgHidden02: false
         })
-
       }
     })
   }

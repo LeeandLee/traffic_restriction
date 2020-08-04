@@ -1,1 +1,36 @@
-/* pages/index/index.wxss */
+view{
+  margin: 10rpx 0;
+}
+
+.restrDate{
+  font-size: 40rpx;
+  text-align: center;
+  
+}
+.restrNum{
+  font-size: 60rpx;
+  color: brown;
+  text-align: center;
+  font-weight: 900;
+}
+.restrImgExist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restrImgExist image{
+  height: 200rpx;
+  width: 200rpx;
+  margin: 20rpx;
+}
+
+.checkDate{
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.checkDate text{
+  color: crimson;
+  font-size: 50rpx;
+  font-weight: 600;
+}
