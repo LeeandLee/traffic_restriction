@@ -1,0 +1,15 @@
+<view>
+  <view class="avatar_name">
+    <open-data type="userAvatarUrl" class="avatar"></open-data>
+    <open-data type="userNickName" class="name"></open-data>
+    <view class="number">
+      <view class="number_n">
+        <input placeholder="请填写车牌号" focus="true" bindchange = "onchange_number"></input>
+      </view>
+    </view>
+  </view>
+
+  <view>
+
+  </view>
+</view>

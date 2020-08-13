@@ -19,7 +19,8 @@ Page({
     pickerDate: '',
     // picker是否已经选择，决定下面的是不是显示
     ifCheck: false,
-    checkObj:{}
+    checkObj:{},
+    area:"zhengzhou"
   },
 
   /**
@@ -55,11 +56,12 @@ Page({
       this.data.todayObj.date = "0" + this.data.todayObj.date;
     }
     var checkdate = this.data.todayObj.year + "-" + this.data.todayObj.month + "-" + this.data.todayObj.date
-
+    var area = this.data.area
     wx.cloud.callFunction({
       name: "restriction",
       data: {
-        checkdate
+        checkdate,
+        area
       }
     }).then(res => {
       console.log(res)
@@ -104,11 +106,13 @@ Page({
     this.setData({
       checkObj: checkObj
     })
-
+    
+    var area = this.data.area
     wx.cloud.callFunction({
       name: "restriction",
       data: {
-        checkdate
+        checkdate,
+        area
       }
     }).then(res => {
       this.setData({

@@ -9,9 +9,9 @@ exports.main = async (event, context) => {
   //必须用八位数字作为唯一参数，才能保证函数的简洁有效
   // console.log(event)
   // return [1,1]
-  // 这里有个很担典型的异步问题，直接使用return，会返回undefined
+  // 这里有个很典型的异步问题，直接使用return，会返回undefined
 return new Promise((resolve, reject)=>{
-  db.collection("List").where({
+  db.collection(event.area).where({
     checkdate: event.checkdate
   }).get().then(res => {
     if (res.data.length != 0) {
