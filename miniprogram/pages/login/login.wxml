@@ -1,15 +1,16 @@
 <view>
-  <view class="avatar_name">
+  <view class="userInfo">
     <open-data type="userAvatarUrl" class="avatar"></open-data>
     <open-data type="userNickName" class="name"></open-data>
-    <view class="number">
-      <view class="number_n">
-        <input placeholder="请填写车牌号" focus="true" bindchange = "onchange_number"></input>
-      </view>
-    </view>
   </view>
+  <view class="number">
+    <view class="number_n">
+      <!-- <input placeholder="请填写车牌号" focus="true" bindchange = "onchange_number"></input> -->
+      <van-field value="{{text}}" label="车牌号" placeholder="请填写车牌号"  maxlength="6"
+      bindinput="onchange_number" block />
 
-  <view>
+      <button type="primary" bindtap="submit" class="submit">提交/更改</button>
 
+    </view>
   </view>
 </view>

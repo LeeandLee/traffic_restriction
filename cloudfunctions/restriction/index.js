@@ -3,7 +3,6 @@ const cloud = require('wx-server-sdk')
 cloud.init()
 const db = cloud.database()
 
-
 // 云函数入口函数
 exports.main = async (event, context) => {
   //必须用八位数字作为唯一参数，才能保证函数的简洁有效
