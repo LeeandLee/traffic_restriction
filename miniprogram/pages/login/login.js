@@ -1,7 +1,7 @@
 
 Page({
   data: {
-    text:"000"
+    text:""
   },
   onShow:function(e){
     wx.cloud.callFunction({
